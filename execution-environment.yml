@@ -1,0 +1,9 @@
+---
+version: 1
+build_arg_defaults:
+  EE_BASE_IMAGE: 'registry.redhat.io/ansible-automation-platform-20-early-access/ee-supported-rhel8:2.0.0'
+dependencies:
+  python: requirements.txt
+additional_build_steps:
+  append:
+    - COPY zoneinfo /usr/share/zoneinfo
